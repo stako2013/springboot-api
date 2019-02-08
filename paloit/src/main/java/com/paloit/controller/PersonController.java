@@ -34,7 +34,10 @@ public class PersonController {
 		String[] fullName = personName.split(" ");
 		
 		String fristName = fullName[0];
-		String lastName = fullName[1];
+		String lastName = "";
+		if (fullName.length > 1) {
+			lastName = fullName[1];
+		}
 		
 		person.setFirstName(fristName);
 		person.setLastName(lastName);
